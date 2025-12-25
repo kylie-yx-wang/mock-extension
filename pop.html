@@ -6,20 +6,4 @@
   </body>
 </html>
 
-<script>
-  const input = document.getElementById("textbox");
-
-  input.addEventListener("input", (e) => {
-    let uncapital = e.target.value;
-    let newValue = ""
-    for (let i = 0; i < uncapital.length; i++) {
-      if (i % 2) {
-        newValue += uncapital[i].toUpperCase();
-      } else {
-        newValue += uncapital[i];
-      }
-    }
-    document.getElementById("result").textContent = newValue;
-  });
-
-</script>
+<script src="pop.js"></script>
