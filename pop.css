@@ -1,1 +1,17 @@
+h4 {
+  font-family: "Tahoma";
+  font-weight: 400;
+  letter-spacing: 1.4px;
+  font-size: 14px;
+  color: rgb(60, 100, 80);
+  margin-bottom: 5px;
+}
 
+body {
+  background-color: rgb(220, 240, 220);
+  padding: 10px;
+}
+
+textarea {
+  width: 250px;
+}
