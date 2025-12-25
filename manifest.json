@@ -1,10 +1,17 @@
 {
   "name": "Mock Extension",
   "description": "Caps Extension",
-  "version": "1.1",
+  "version": "1.2",
   "manifest_version": 3,
   "action": {
     "default_popup": "pop.html",
-    "default_icon": "icon.jpg"
+    "default_icon": {
+      "48": "smile48.png",
+      "128": "smile128.png"
+    }
+  },
+  "icons": {
+    "48": "smile48.png",
+    "128": "smile128.png"
   }
 }
