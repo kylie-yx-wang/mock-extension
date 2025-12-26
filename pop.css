@@ -1,17 +1,38 @@
-h4 {
-  font-family: "Tahoma";
-  font-weight: 400;
-  letter-spacing: 1.4px;
-  font-size: 14px;
-  color: rgb(60, 100, 80);
-  margin-bottom: 5px;
-}
-
-body {
-  background-color: rgb(220, 240, 220);
-  padding: 10px;
-}
-
-textarea {
-  width: 250px;
-}
+    body {
+    	background-color: rgb(220, 240, 220);
+        padding: 10px;
+    }
+    
+    textarea, #copyBtn, p {
+    	font-weight: 400;
+        letter-spacing: 1.4px;
+        font-family: "Tahoma";
+        padding: 5px;
+        font-size: 14px;
+        color: rgb(60, 100, 80);
+    }
+    
+    textarea {
+    	width: 250px;
+        height: 50px;
+        border: 2px solid rgb(190, 220, 190);
+        border-radius: 3px;
+        resize: none;
+    }
+    textarea::placeholder {
+    	color: rgb(130, 170, 130);
+    }
+    
+    p {
+    	margin-left: 2px;
+    }
+    
+    #copyBtn {
+    	color: white;
+        background-color: rgb(130, 170, 130);
+        border: none;
+        border-radius: 3px;
+        font-size: 12px;
+        padding-left: 7px;
+        margin-left: 1px;
+    }
