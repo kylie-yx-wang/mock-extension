@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const input = document.getElementById("textbox");
     const result = document.getElementById("result");
     const copyBtn = document.getElementById("copyBtn");
+    const modeSelect = document.getElementById("dropdown");
     const Modes = {
         LOWER: 'LOWER',
         UPPER: 'UPPER',
@@ -19,6 +20,12 @@ document.addEventListener("DOMContentLoaded", () => {
         "🐸","🐶","🐱","🦊","🐼",
         "🚀","🌈","⚡","💡","🎉","🔞"
     ];
+
+    modeSelect.addEventListener("change", (e) => {
+        mode = Modes[e.target.value];
+        input.dispatchEvent(new Event("input"));
+    });
+
 
     function lowerCase() {
         const text = input.value;
