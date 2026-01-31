@@ -1,3 +1,7 @@
+    * {
+        white-space: pre;
+    }
+
     body {
     	background-color: rgb(220, 240, 220);
         padding: 10px;
