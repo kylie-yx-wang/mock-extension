@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         REPEAT: 'REPEAT',
         CUSTOM: 'CUSTOM',
     }
-    const mode = 0;
+    let mode = Modes.LOWER;
     const emojis = [
         "😀","😂","🥹","😎","🤯","😈","👀","💀","🔥","✨",
         "🍕","🍜","🍩","🍓","🥑",
@@ -21,17 +21,17 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 
     function lowerCase() {
-        const text = e.target.value;
+        const text = input.value;
         result.textContent = text.toLowerCase();
     }
 
     function upperCase() {
-        const text = e.target.value;
+        const text = input.value;
         result.textContent = text.toUpperCase();
     }
 
     function mockCase() {
-        const text = e.target.value;
+        const text = input.value;
         let newValue = "";
     
         for (let i = 0; i < text.length; i++) {
@@ -48,18 +48,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function clapCase() {
-        const text = e.target.value;
+        const text = input.value;
         let newValue = "";
         for (i = 0; i < text.length; i++) {
-            newValue += (text[i] == " ") ? 
-                text[i] : " &#128079; "
+            newValue += (text[i] == " ") ?
+            " 👏 " : text[i];
         }
 
         result.textContent = newValue;
     }
 
     function spaceCase() {
-        const text = e.target.value;
+        const text = input.value;
         let newValue = "";
         for (i = 0; i < text.length; i++) {
             newValue += text[i];
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function emojiCase() {
-        const text = e.target.value;
+        const text = input.value;
         let newValue = "";
         for (i = 0; i < text.length; i++) {
             newValue += text[i];
