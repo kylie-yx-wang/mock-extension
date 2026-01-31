@@ -7,7 +7,7 @@
         padding: 10px;
     }
     
-    textarea, #copyBtn, p {
+    textarea, #copyBtn, p, #dropdown {
     	font-weight: 400;
         letter-spacing: 1.4px;
         font-family: "Tahoma";
