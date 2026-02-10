@@ -1,17 +1,17 @@
 {
-  "name": "Mock Extension",
-  "description": "Caps Extension",
-  "version": "1.3",
+  "name": "Dress Text",
+  "description": "A simple extension that dresses up your text! Featuring lots of modes (and more to come!)",
+  "version": "1.5",
   "manifest_version": 3,
   "action": {
     "default_popup": "pop.html",
     "default_icon": {
-      "48": "smile48.png",
-      "128": "smile128.png"
+      "48": "t48.png",
+      "128": "t128.png"
     }
   },
   "icons": {
-    "48": "smile48.png",
-    "128": "smile128.png"
+    "48": "t48.png",
+    "128": "t128.png"
   }
 }

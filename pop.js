@@ -29,12 +29,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function lowerCase() {
         const text = input.value;
-        result.textContent = text.toLowerCase();
+        result.innerText = text.toLowerCase();
     }
 
     function upperCase() {
         const text = input.value;
-        result.textContent = text.toUpperCase();
+        result.innerText = text.toUpperCase();
     }
 
     function mockCase() {
@@ -42,16 +42,15 @@ document.addEventListener("DOMContentLoaded", () => {
         let newValue = "";
     
         for (let i = 0; i < text.length; i++) {
-          if (text[i] == 'i' || (i+1 < text.length && text[i+1] == 'l')) {
+          if ((text[i] != 'l') && (i % 2 == 0 || text[i] == 'i' || 
+            (i+1 < text.length && text[i+1] == 'l'))) {
               newValue += text[i];
           } else {
-              newValue += (i % 2)
-                  ? text[i].toUpperCase()
-                  : text[i];
+              newValue += text[i].toUpperCase();
           }
         }
     
-        result.textContent = newValue;
+        result.innerText = newValue;
     }
 
     function clapCase() {
@@ -62,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
             " 👏 " : text[i];
         }
 
-        result.textContent = newValue;
+        result.innerText = newValue;
     }
 
     function spaceCase() {
@@ -73,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
             newValue += " ";
         }
 
-        result.textContent = newValue;
+        result.innerText = newValue;
     }
 
     function emojiCase() {
@@ -84,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
             newValue += emojis[Math.floor(Math.random()*emojis.length)];
         }
 
-        result.textContent = newValue;
+        result.innerText = newValue;
     }
     
     function repeatCase() {
@@ -114,19 +113,19 @@ document.addEventListener("DOMContentLoaded", () => {
         case Modes.CUSTOM:
             customCase(); break;
         default:
-            result.textContent = e.target.value;
+            result.innerText = e.target.value;
       }
     });
     
     copyBtn.addEventListener("click", async () => {
-      const copiedText = result.textContent;
+      const copiedText = result.innerText;
     
       if (!copiedText) return;
     
       try {
         await navigator.clipboard.writeText(copiedText);
-        copyBtn.textContent = "Copied!";
-        setTimeout(() => copyBtn.textContent = "Copy", 1000);
+        copyBtn.innerText = "Copied!";
+        setTimeout(() => copyBtn.innerText = "Copy", 1000);
       } catch (err) {
         console.error(err);
       }
